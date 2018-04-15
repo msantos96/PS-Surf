@@ -15,6 +15,10 @@ mongoose.connect(connectionString).then( () => debug('Nigga We Made It')).catch(
 let wade = new model.Player({name: "Dwyane Wade 2", team: "Miami Heat", age: 35});
 wade.save( () => debug("Wade was saved"));
 
+// mongoose.set('debug', function (coll, method, query, doc,opts) {
+//     //do your thing
+//     debugger;
+// });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

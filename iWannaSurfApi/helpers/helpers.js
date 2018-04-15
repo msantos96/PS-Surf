@@ -1,8 +1,15 @@
 
 
-const EARTH_RADIUS = 6371;
+
 
 function distanceBetweenCoordinates(lat1, lon1, lat2, lon2) {
+    function toRad(value)
+    {
+
+        return value * Math.PI / 180;
+    }
+
+    const EARTH_RADIUS = 6371;
 
     let dLat = toRad(lat2-lat1);
     let dLon = toRad(lon2-lon1);
@@ -15,10 +22,12 @@ function distanceBetweenCoordinates(lat1, lon1, lat2, lon2) {
 
     return EARTH_RADIUS * c;
 }
-function toRad(value)
-{
-    return value * Math.PI / 180;
+
+function buildQueryString(url, options){
+
 }
+
 module.exports = {
-    distanceBetweenCoordinates: distanceBetweenCoordinates
+    distanceBetweenCoordinates: distanceBetweenCoordinates,
+    queryString: buildQueryString
 };
