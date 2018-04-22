@@ -1,11 +1,10 @@
-
+const queryString = require('query-string');
 
 
 
 function distanceBetweenCoordinates(lat1, lon1, lat2, lon2) {
     function toRad(value)
     {
-
         return value * Math.PI / 180;
     }
 
@@ -23,8 +22,9 @@ function distanceBetweenCoordinates(lat1, lon1, lat2, lon2) {
     return EARTH_RADIUS * c;
 }
 
-function buildQueryString(url, options){
-
+function buildQueryString(urlString, params){
+    let retUrl = urlString + queryString.stringify(params);
+    return retUrl;
 }
 
 module.exports = {

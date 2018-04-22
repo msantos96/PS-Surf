@@ -27,21 +27,28 @@ module.exports = function(dataSource){
 
     function rate(spots){
         return new Promise(function(resolve,reject){
-            Promise.all(spotsToPromise(spots, dataSource)).then(resolve)
+            Promise.all(spotsToPromise(spots, dataSource))
+                .then(resolve)
                 .catch(reject)
         });
     }
     return {
         getSpotsWithinRange: spotsWithinRange,
-        rateSpots: rate
+        getSpots: rate
     }
 };
 
 function spotsToPromise(spots, dataSource) {
     return spots.map( spot => new Promise(function (resolve, reject) {
-        dataSource({lat: spot.lat, lon: spot.lon}).then(resolve).catch(reject)
+        dataSource({lat: spot.identification.lat, lon: spot.identification.lon}).then( apiSpot => {
+            return {
+                dbSpot: spot,
+                apiSpot: apiSpot
+            };
+        }).then(resolve).catch(reject)
     }))
 }
+
 function spotsWithin(allSpots, options,resolver){
     return allSpots.map( spot => spot._doc).filter( spot => radiusFilter(options, spot));
 }
@@ -49,10 +56,3 @@ function radiusFilter(options, spot){
     return helpers.distanceBetweenCoordinates(options.lat, options.lon, spot.identification.lat, spot.identification.lon) <= options.radius;
 }
 
-/*
-fetch('http://api.worldweatheronline.com/premium/v1/weather.ashx?key=0016a118c771436ea66131639180904&q=38.7,-9.4&format=json')
-    .then((response) =>  response.text())
-    .then( body => res.end(JSON.stringify(body)))
-    .catch(function(err){
-        debug("Error fetching data: " + err);
-    });*/
