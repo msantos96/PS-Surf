@@ -1,8 +1,19 @@
 <resources>
-    <string name="app_name">iWannaSurf</string>
+    <!-- MainActivity -->
+    <string name="app_name">iWannaSurfApp</string>
+    <string name="temperature">Temperature</string>
+    <string name="height">Height</string>
+    <string name="period">Period</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- Home Fragment -->
+    <string name="title_home">Home</string>
 
-    <string name="action_settings">Settings</string>
+    <!-- Search Fragment -->
+    <string name="title_search">Search</string>
+
+    <!-- Favorite Fragment -->
+    <string name="title_favorite">Favorite</string>
+
+    <!-- Settings Fragment -->
+    <string name="title_settings">Settings</string>
 </resources>
