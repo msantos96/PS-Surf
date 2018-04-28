@@ -1,17 +1,13 @@
-const fetch = require('node-fetch');
 const express = require('express');
 const config = require('../settings/config');
-const helper = require('../helpers/helpers');
 const router = express.Router();
 const debug = require('debug')('iwannasurfapi:suggester');
 const data = require('../data/data')(dataProvider);
-const api = require('../data/api');
-
+const api = require('../data/api')(config.api[process.env.API] || config.api.default);
 
 
 function dataProvider(options){
-    let url = api.apiBuilder(config.api[process.env.API] || "worldweather")(options);
-    return fetch(url);
+    return api.get(options);
 }
 function rate(spots){
     return spots;
@@ -20,46 +16,18 @@ function rate(spots){
 function getResponseBodies(spots){
     let promises = spots.map( s => {
         return new Promise(function (resolve, reject) {
-            s.apiSpot.text().then( body => resolve( {dbSpot: s.dbSpot, apiSpot: JSON.parse(body)} ))
+            api.processResponse(s)
+                .then( body => {
+                    resolve( {dbSpot: s.dbSpot, apiSpot: JSON.parse(body)})
+                })
+                .catch(reject)
         })
     });
     return Promise.all(promises);
 }
 
 function mapToEntity(spots) {
-    return spots.map( s => {
-        let todayData = s.apiSpot.data.weather[1];
-        let data = todayData.hourly[todayData.hourly.length - 1]; // to be determined according to current hour
-        return {
-            dbSpot: s.dbSpot,
-            apiSpot: {
-                maxTemp: todayData.maxtempC,
-                mixTemp: todayData.mintempC,
-                data: {
-                    swell: {
-                        height: data.swellHeight_m,
-                        period: data.swellPeriod_secs,
-                        direction: data.swellDir16Point,
-                        compassDirection: data.swellDir16Point
-                    },
-                    wind: {
-                        speed: data.windspeedKmph,
-                        direction: data.winddirDegree,
-                        compassDirection: data.winddir16Point
-                    },
-                    weather: {
-                        desc: data.weatherDesc,
-                        precipitation: data.precipMM,
-                        humidity: data.humidity,
-                        feelsLike: data.FeelsLikeC,
-                        windChill: data.WindChillC,
-                        windGusts: data.WindGustKmph,
-                        waterTemp: data.waterTemp_C
-                    }
-                }
-            }
-        }
-    })
+    return api.map(spots);
 }
 
 router.get('/', function(req, res, next) {
