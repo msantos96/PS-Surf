@@ -1,24 +1,12 @@
 const createError = require('http-errors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const mongoose = require('mongoose');
-const config = require('./settings/config');
+const database = require('./data/database');
 const spotSuggester = require('./routes/suggester');
 
-const debug = require('debug')('iwannasurfapi:app');
-const model = require('./model/model');
+database.connect();
+
 const app = express();
-const connectionString = config.databases[process.env.SYSTEM || 'dev'];
-
-mongoose.connect(connectionString).then( () => debug('Nigga We Made It')).catch( err => debug('Mah, Help Me!!' + err));
-//
-let wade = new model.Player({name: "Dwyane Wade 2", team: "Miami Heat", age: 35});
-wade.save( () => debug("Wade was saved"));
-
-// mongoose.set('debug', function (coll, method, query, doc,opts) {
-//     //do your thing
-//     debugger;
-// });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

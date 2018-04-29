@@ -10,7 +10,10 @@ function dataProvider(options){
     return api.get(options);
 }
 function rate(spots){
-    return spots;
+    return spots.map( s => {
+        s.dbSpot.rating = api.rate(s);
+        return s;
+    }).sort( (s1,s2) => s2.dbSpot.rating - s1.dbSpot.rating);
 }
 
 function getResponseBodies(spots){
