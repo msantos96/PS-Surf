@@ -1,0 +1,22 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@integer/distance"
+        android:inputType="numberSigned"
+        android:key="distance"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_display_distance" />
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/sort_titles"
+        android:entryValues="@array/sort_values"
+        android:key="sort_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_sort_search_results_by" />
+
+</PreferenceScreen>

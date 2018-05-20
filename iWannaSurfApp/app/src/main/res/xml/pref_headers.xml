@@ -1,0 +1,20 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="io.surf.wm.iwannasurfapp.SettingsActivity$GeneralPreferenceFragment"
+        android:icon="@drawable/ic_edit_black_24dp"
+        android:title="@string/pref_header_general" />
+
+    <header
+        android:fragment="io.surf.wm.iwannasurfapp.SettingsActivity$PermissionsPreferenceFragment"
+        android:icon="@drawable/ic_perm_data_setting_black_24dp"
+        android:title="@string/pref_header_permissions" />
+
+    <header
+        android:fragment="io.surf.wm.iwannasurfapp.SettingsActivity$MemoryPreferenceFragment"
+        android:icon="@drawable/ic_data_usage_black_24dp"
+        android:title="@string/pref_header_memory" />
+
+</preference-headers>

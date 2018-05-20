@@ -1,19 +1,54 @@
 <resources>
     <!-- MainActivity -->
-    <string name="app_name">iWannaSurfApp</string>
+    <string name="app_name">IWannaSurf</string>
     <string name="temperature">Temperature</string>
     <string name="height">Height</string>
     <string name="period">Period</string>
 
-    <!-- Home Fragment -->
-    <string name="title_home">Home</string>
-
     <!-- Search Fragment -->
     <string name="title_search">Search</string>
 
-    <!-- Favorite Fragment -->
-    <string name="title_favorite">Favorite</string>
+    <!-- SettingsActivity -->
+    <string name="title_activity_settings">Settings</string>
 
-    <!-- Settings Fragment -->
-    <string name="title_settings">Settings</string>
+    <!-- General Settings Fragment -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_share_location">Share location</string>
+    <string name="pref_description_share_location_allow">To use the application you need to
+        share your location information
+    </string>
+    <string name="pref_description_share_location_n_allow">To use the application you need to
+        share your location information. To do that Settings -> Applications -> IWannaSurf -> Permissions
+    </string>
+    <string name="pref_description_share_location_sharing">Your currently sharing your location. To
+     stop sharing go to Settings -> Applications -> IWannaSurf -> Permissions</string>
+
+    <string name="pref_title_display_distance">Distance in kilometers</string>
+
+    <string name="pref_title_sort_search_results_by">Sort search results by</string>
+    <string-array name="sort_titles">
+        <item>Rating</item>
+        <item>Distance</item>
+        <item>Crowd</item>
+    </string-array>
+    <string-array name="sort_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="pref_title_reset_preferences">Reset Preferences</string>
+
+    <!-- Permissions Settings Fragment -->
+    <string name="pref_header_permissions">Permissions</string>
+
+    <!-- Memory Settings Fragment -->
+    <string name="pref_header_memory">Memory</string>
+
+    <!-- Notification Settings Fragment -->
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <!-- SettingsActivity -->
+    <string name="open_maps">Open in maps</string>
 </resources>
