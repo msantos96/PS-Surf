@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7191a838-8bfe-41c9-8f5b-75d142e8b777" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -2481,7 +2480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526930994343</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="App">
+      <created>1526932100255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1526932100255</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
