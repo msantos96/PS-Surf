@@ -70,26 +70,10 @@ class SettingsActivity : AppCompatPreferenceActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == android.R.id.home) {
-            finish()
+            onBackPressed()
             return true
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    /**
-     * Used to avoid redefine onOptionsItemSelected in every preference fragment
-     * since all of them return to the settingsActivity.
-     */
-    @TargetApi(Build.VERSION_CODES.M)
-    abstract class SettingsPreferenceFragment : PreferenceFragment() {
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            val id = item.itemId
-            if (id == android.R.id.home) {
-                startActivity(Intent(activity, SettingsActivity::class.java))
-                return true
-            }
-            return super.onOptionsItemSelected(item)
-        }
     }
 
     /**
@@ -97,7 +81,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.M)
-    class GeneralPreferenceFragment : SettingsPreferenceFragment() {
+    class GeneralPreferenceFragment : PreferenceFragment() {
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -119,7 +103,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.M)
-    class PermissionsPreferenceFragment : SettingsPreferenceFragment() {
+    class PermissionsPreferenceFragment : PreferenceFragment() {
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -148,6 +132,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
                 true
             }
             p.isEnabled = false
+            //p.setOnPreferenceClickListener {  }
 
             p.setSummary(
                 if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
@@ -163,7 +148,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
      * when the activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.M)
-    class MemoryPreferenceFragment : SettingsPreferenceFragment() {
+    class MemoryPreferenceFragment : PreferenceFragment() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             addPreferencesFromResource(R.xml.pref_memory)

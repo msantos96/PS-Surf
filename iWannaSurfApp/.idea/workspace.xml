@@ -11,15 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7191a838-8bfe-41c9-8f5b-75d142e8b777" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/model/Dtos.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/model/Dtos.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/model/Settings.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/model/Settings.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/search_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/search_fragment.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/spot_preview.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spot_preview.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,14 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity_spot_info.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_spot_info.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
+      <file leaf-file-name="SettingsActivity.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2025">
+              <caret line="150" column="55" lean-forward="false" selection-start-line="150" selection-start-column="55" selection-end-line="150" selection-end-column="55" />
+              <folding />
+            </state>
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </entry>
+      </file>
+      <file leaf-file-name="IWSApplication.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/IWSApplication.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -2216,7 +2215,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_spot_info.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/pref_permissions.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/adapter/SpotArrayAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/fragment/SearchFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SpotInfoActivity.kt" />
@@ -2230,6 +2228,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/model/Dtos.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt" />
       </list>
     </option>
   </component>
@@ -2274,13 +2273,6 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="iwannasurfapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iWannaSurfApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="iwannasurfapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -2482,6 +2474,14 @@
       <option name="presentableId" value="Default" />
       <updated>1524895717732</updated>
     </task>
+    <task id="LOCAL-00001" summary="App">
+      <created>1526930994343</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526930994343</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2531,6 +2531,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="App" />
+    <option name="LAST_COMMIT_MESSAGE" value="App" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2753,14 +2757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2487">
-          <caret line="184" column="54" lean-forward="false" selection-start-line="184" selection-start-column="54" selection-end-line="184" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/fragment/listener/FragmentsListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -2809,26 +2805,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/IWSApplication.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/AppCompatPreferenceActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SpotInfoActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="51" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -2971,7 +2951,7 @@
         <state relative-caret-position="60">
           <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
           <folding>
-            <element signature="e#176#209#0" expanded="true" />
+            <element signature="e#176#209#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3013,6 +2993,30 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SpotInfoActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/IWSApplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SettingsActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="150" column="55" lean-forward="false" selection-start-line="150" selection-start-column="55" selection-end-line="150" selection-end-column="55" />
           <folding />
         </state>
       </provider>
