@@ -7,7 +7,7 @@ import java.util.function.Supplier
 class Settings(val distance: Supplier<Float>, val sortCriteria: Supplier<SortCriteria>) {
     enum class SortCriteria : Comparator<Spot> {
         RATING() {
-            override fun compare(o1: Spot, o2: Spot): Int = o2.dbSpot.rating.compareTo(o1.dbSpot.rating)
+            override fun compare(o1: Spot, o2: Spot): Int = o1.dbSpot.rating.compareTo(o2.dbSpot.rating)
         }
         /*,DISTANCE() {
             override fun compare(o1: Spot, o2: Spot): Int =

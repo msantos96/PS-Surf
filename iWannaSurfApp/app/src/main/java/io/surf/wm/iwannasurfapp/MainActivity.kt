@@ -48,6 +48,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         replaceFragment(supportFragmentManager::beginTransaction)
 
         if(savedInstanceState != null) return
@@ -72,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                         .apply()
 
                 appState.queue.add(
-                        OfflineStringRequest(Request.Method.GET, getSuggestUrl(location.latitude, location.longitude, appState.settings.distance.get()),
+                        StringRequest(Request.Method.GET, getSuggestUrl(location.latitude, location.longitude, appState.settings.distance.get()),
                                 Response.Listener { response ->
                                     appState.spots = Gson().fromJson(response, Array<Dtos.Spot>::class.java).sortedWith(appState.settings.sortCriteria.get())
                                     val adapter = findViewById<ListView>(R.id.spot_list).adapter as SpotArrayAdapter

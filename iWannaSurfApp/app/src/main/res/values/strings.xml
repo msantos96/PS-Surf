@@ -1,6 +1,6 @@
 <resources>
     <!-- MainActivity -->
-    <string name="app_name">IWannaSurf</string>
+    <string name="app_name">iWannaSurf</string>
     <string name="temperature">Temperature</string>
     <string name="height">Height</string>
     <string name="period">Period</string>
