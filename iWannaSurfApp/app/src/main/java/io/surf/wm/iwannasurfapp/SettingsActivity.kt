@@ -15,6 +15,7 @@ import android.view.MenuItem
 import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.preference.*
+import android.provider.Settings
 import android.support.v4.content.ContextCompat
 
 /**
@@ -131,15 +132,21 @@ class SettingsActivity : AppCompatPreferenceActivity() {
                         .commit()
                 true
             }
-            p.isEnabled = false
-            //p.setOnPreferenceClickListener {  }
+
+            p.setOnPreferenceClickListener {
+                startActivity(
+                        Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", context.packageName, null))
+                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
+                true
+            }
 
             p.setSummary(
                 if(ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
                     R.string.pref_description_share_location_sharing
-                else if(shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION))
-                    R.string.pref_description_share_location_allow
-                else R.string.pref_description_share_location_n_allow)
+                else
+                    R.string.pref_description_share_location_start
+            )
         }
     }
 

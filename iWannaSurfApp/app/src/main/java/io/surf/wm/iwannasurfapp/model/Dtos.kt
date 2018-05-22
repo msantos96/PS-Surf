@@ -14,6 +14,6 @@ class Dtos {
     class Interval<T>(val min: T, val max: T) : Serializable
 
     class RealTimeData(val swell: Swell, val wind: Wind) : Serializable
-    class Swell(val height: Double, val period: Double, val direction: Int) : Serializable
-    class Wind(val speed: Int, val direction: Int) : Serializable
+    class Swell(val height: Double, val period: Double, val direction: Double) : Serializable
+    class Wind(val speed: Double, val direction: Double) : Serializable
 }

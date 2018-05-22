@@ -10,6 +10,7 @@ import android.location.LocationManager
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.FragmentTransaction
 import android.support.v4.content.ContextCompat
@@ -24,6 +25,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View.OnClickListener
 import android.widget.AdapterView.OnItemClickListener
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.android.volley.toolbox.StringRequest
 
@@ -48,8 +50,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         replaceFragment(supportFragmentManager::beginTransaction)
 
         if(savedInstanceState != null) return
@@ -61,11 +61,12 @@ class MainActivity : AppCompatActivity() {
 
         val searchFragment: SearchFragment = appState.frags[R.id.navigation_search] as SearchFragment
 
-        searchFragment.searchCb = OnClickListener { view ->
+        searchFragment.searchCb = OnClickListener { _ ->
             val lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-
+                findViewById<ProgressBar>(R.id.prog_bar).visibility = ProgressBar.VISIBLE
+                findViewById<FloatingActionButton>(R.id.spot_search).isEnabled = false
                 val location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
 
                 appState.sharedPreference.edit()
@@ -80,10 +81,13 @@ class MainActivity : AppCompatActivity() {
                                     val adapter = findViewById<ListView>(R.id.spot_list).adapter as SpotArrayAdapter
                                     adapter.clear()
                                     adapter.addAll(appState.spots)
+                                    findViewById<ProgressBar>(R.id.prog_bar).visibility = ProgressBar.INVISIBLE
+                                    findViewById<FloatingActionButton>(R.id.spot_search).isEnabled = true
                                 },
-                                Response.ErrorListener { error ->
-                                    //TODO: error
-                                    println()
+                                Response.ErrorListener { _ ->
+                                    Toast.makeText(this, "Something Went Wrong!", Toast.LENGTH_LONG).show()
+                                    findViewById<ProgressBar>(R.id.prog_bar).visibility = ProgressBar.INVISIBLE
+                                    findViewById<FloatingActionButton>(R.id.spot_search).isEnabled = true
                                 }))
             } else {
                 if(!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION)) {

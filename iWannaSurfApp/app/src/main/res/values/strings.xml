@@ -15,14 +15,10 @@
     <string name="pref_header_general">General</string>
 
     <string name="pref_title_share_location">Share location</string>
-    <string name="pref_description_share_location_allow">To use the application you need to
-        share your location information
+    <string name="pref_description_share_location_start">To use the application you need to
+        start sharing your location.
     </string>
-    <string name="pref_description_share_location_n_allow">To use the application you need to
-        share your location information. To do that Settings -> Applications -> IWannaSurf -> Permissions
-    </string>
-    <string name="pref_description_share_location_sharing">Your currently sharing your location. To
-     stop sharing go to Settings -> Applications -> IWannaSurf -> Permissions</string>
+    <string name="pref_description_share_location_sharing">Your currently sharing your location.</string>
 
     <string name="pref_title_display_distance">Distance in kilometers</string>
 
