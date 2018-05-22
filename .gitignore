@@ -63,24 +63,24 @@ obj/
 /out/
 
 # User-specific configurations
-.idea/libraries/
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/.name
-.idea/compiler.xml
-.idea/copyright/profiles_settings.xml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes/scope_settings.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
-.idea/datasources.xml
-.idea/dataSources.ids
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
+iWannaSurfApp/.idea/libraries/
+iWannaSurfApp/.idea/workspace.xml
+iWannaSurfApp/.idea/tasks.xml
+iWannaSurfApp/.idea/.name
+iWannaSurfApp/.idea/compiler.xml
+iWannaSurfApp/.idea/copyright/profiles_settings.xml
+iWannaSurfApp/.idea/encodings.xml
+iWannaSurfApp/.idea/misc.xml
+iWannaSurfApp/.idea/modules.xml
+iWannaSurfApp/.idea/scopes/scope_settings.xml
+iWannaSurfApp/.idea/dictionaries
+iWannaSurfApp/.idea/vcs.xml
+iWannaSurfApp/.idea/jsLibraryMappings.xml
+iWannaSurfApp/.idea/datasources.xml
+iWannaSurfApp/.idea/dataSources.ids
+iWannaSurfApp/.idea/sqlDataSources.xml
+iWannaSurfApp/.idea/dynamic.xml
+iWannaSurfApp/.idea/uiDesigner.xml
 
 # OS-specific files
 .DS_Store
