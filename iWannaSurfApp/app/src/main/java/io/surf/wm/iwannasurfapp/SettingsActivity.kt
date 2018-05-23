@@ -19,7 +19,7 @@ import android.provider.Settings
 import android.support.v4.content.ContextCompat
 
 /**
- * A [PreferenceActivity] that presents a set of application settings. On
+ * Spot [PreferenceActivity] that presents a set of application settings. On
  * handset devices, settings are presented as a single list. On tablets,
  * settings are split by category, with category headers shown to the left of
  * the list of settings.
@@ -194,7 +194,7 @@ class SettingsActivity : AppCompatPreferenceActivity() {
     companion object {
 
         /**
-         * A preference value change listener that updates the preference's summary
+         * Spot preference value change listener that updates the preference's summary
          * to reflect its new value.
          */
         private val sBindPreferenceSummaryToValueListener = Preference.OnPreferenceChangeListener { preference, value ->

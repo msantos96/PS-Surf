@@ -1,6 +1,6 @@
 package io.surf.wm.iwannasurfapp.model;
 
-public class Dtos {
+class Dto {
     public class Spot {
         public DbSpot dbSpot;
         public RealTimeData realTimeData;
