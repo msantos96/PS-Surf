@@ -134,5 +134,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-//open maps
-//remove mipmap extra

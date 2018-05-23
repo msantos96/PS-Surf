@@ -24,8 +24,8 @@
       <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+            <state relative-caret-position="1620">
+              <caret line="135" column="1" lean-forward="false" selection-start-line="135" selection-start-column="1" selection-end-line="135" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -2178,13 +2178,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spot_preview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/model/Dtos.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/model/Settings.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/adapter/SpotArrayAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/SpotInfoActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/pref_headers.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/navigation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt" />
       </list>
     </option>
   </component>
@@ -2674,6 +2674,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2690,7 +2691,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32737276" sideWeight="0.49676898" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2921,8 +2922,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+        <state relative-caret-position="1620">
+          <caret line="135" column="1" lean-forward="false" selection-start-line="135" selection-start-column="1" selection-end-line="135" selection-end-column="1" />
           <folding />
         </state>
       </provider>
