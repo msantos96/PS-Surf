@@ -1,30 +1,38 @@
 package io.surf.wm.iwannasurfapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
 import android.view.MenuItem
 import android.widget.TextView
 import io.surf.wm.iwannasurfapp.model.Dtos.*
 
 class SpotInfoActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spot_info)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.hide();
 
         val spot = intent.getSerializableExtra(MainActivity.EXTRA_SPOT) as Spot
         val (sLat, sLon) = Pair(intent.getDoubleExtra(MainActivity.EXTRA_LAT, 0.0), intent.getDoubleExtra(MainActivity.EXTRA_LON, 0.0))
 
         title = spot.dbSpot.identification.name
 
-        findViewById<TextView>(R.id.spot_maps).setOnClickListener({
+        findViewById<ConstraintLayout>(R.id.navTo).setOnClickListener({
             goToMaps(sLat, sLon, spot.dbSpot.identification.lat, spot.dbSpot.identification.lon)
         })
+
+        (findViewById<TextView>(R.id.name)).text = spot.dbSpot.identification.name;
+        (findViewById<TextView>(R.id.distance)).text = spot.dbSpot.identification.distance.format(2).toString();
     }
+    fun Double.format(digits: Int) = String.format("%.${digits}f", this)
 
     private fun goToMaps(sLat: Double, sLon: Double, dLat: Double, dLon: Double) {
         //val str = String.format("geo:%s,%s", String.format("%f", lat).replace(',', '.'), String.format("%f", lon).replace(',', '.'))
