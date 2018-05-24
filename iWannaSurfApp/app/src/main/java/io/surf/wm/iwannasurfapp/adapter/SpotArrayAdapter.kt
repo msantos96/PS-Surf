@@ -18,8 +18,11 @@ class SpotArrayAdapter(context: Context?, spots: ArrayList<Spot>) : ArrayAdapter
 
         view.findViewById<TextView>(R.id.spot_name).text = spot.dbSpot.identification.name
         //TODO: distance & CROWD
+        view.findViewById<TextView>(R.id.distance).text = spot.dbSpot.identification.distance.format(2);
+        view.findViewById<TextView>(R.id.crowd).text = spot.dbSpot.additionalInfo.crowd.weekDays.toString();
         view.findViewById<TextView>(R.id.spot_rating).text = spot.dbSpot.rating.toString()
 
         return view
     }
+    fun Double.format(digits: Int) = String.format("%.${digits}f", this)
 }
