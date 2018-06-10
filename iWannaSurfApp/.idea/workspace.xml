@@ -7,19 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1c04911-71df-409a-85f7-63de138bf005" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/fragment/FavoriteFragment.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_border_blue_24dp.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/favorite_fragment.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/IWSApplication.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/IWSApplication.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/fragment/SearchFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/fragment/SearchFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/search_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/search_fragment.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_fragment.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/navigation.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/navigation.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +34,8 @@
       <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="125" column="28" lean-forward="false" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
+            <state relative-caret-position="334">
+              <caret line="126" column="90" lean-forward="false" selection-start-line="126" selection-start-column="90" selection-end-line="126" selection-end-column="90" />
               <folding>
                 <element signature="e#5468#5891#2" expanded="false" />
               </folding>
@@ -2694,6 +2683,14 @@
       <option name="presentableId" value="Default" />
       <updated>1527093475901</updated>
     </task>
+    <task id="LOCAL-00001" summary="FavoriteFragment">
+      <created>1528666061067</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528666061067</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2765,6 +2762,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FavoriteFragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="FavoriteFragment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2938,6 +2939,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="e#236#258#0" expanded="false" />
+            <element signature="e#403#427#0" expanded="false" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3038,8 +3043,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/io/surf/wm/iwannasurfapp/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="125" column="28" lean-forward="false" selection-start-line="125" selection-start-column="28" selection-end-line="125" selection-end-column="28" />
+        <state relative-caret-position="334">
+          <caret line="126" column="90" lean-forward="false" selection-start-line="126" selection-start-column="90" selection-end-line="126" selection-end-column="90" />
           <folding>
             <element signature="e#5468#5891#2" expanded="false" />
           </folding>

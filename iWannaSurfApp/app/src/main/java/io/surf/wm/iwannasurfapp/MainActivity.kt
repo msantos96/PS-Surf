@@ -115,9 +115,6 @@ class MainActivity : AppCompatActivity() {
 
         favoriteFragment.itemClickCb = searchFragment.itemClickCb
 
-        //val cf: CompletableFuture<Dtos.Spot> = CompletableFuture.supplyAsync(Supplier{ -> })
-        //favoriteFragment.futureSpots.add(CompletableFuture())
-        //mapOf<String, CompletableFuture<Dtos.Spot>>()
         for(id in appState.sharedPreference.getStringSet(FAVS_PREF, setOf())) {
             favoriteFragment.futureSpots.putIfAbsent(id, CompletableFuture())
             appState.queue.add(
@@ -127,7 +124,7 @@ class MainActivity : AppCompatActivity() {
                         },
                             Response.ErrorListener { _ ->
                                 //TODO: error
-                                //if(error) remove id from shared preferences.
+                                //if(error == notFound) remove id from shared preferences.
                             }))
         }
     }
