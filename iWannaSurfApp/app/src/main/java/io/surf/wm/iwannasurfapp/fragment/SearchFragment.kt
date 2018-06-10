@@ -25,9 +25,9 @@ class SearchFragment : Fragment() {
         if(savedInstanceState != null)
             onRestoreInstanceState(savedInstanceState)
 
-        view.findViewById<ListView>(R.id.spot_list).adapter = SpotArrayAdapter(context, spots)
+        view.findViewById<ListView>(R.id.spots_list).adapter = SpotArrayAdapter(context, spots)
 
-        view.findViewById<ListView>(R.id.spot_list).onItemClickListener = itemClickCb
+        view.findViewById<ListView>(R.id.spots_list).onItemClickListener = itemClickCb
 
         view.findViewById<FloatingActionButton>(R.id.spot_search).setOnClickListener(searchCb)
 

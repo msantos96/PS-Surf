@@ -8,6 +8,9 @@
     <!-- Search Fragment -->
     <string name="title_search">Search</string>
 
+    <!-- Favorite Fragment -->
+    <string name="title_favorite">Favorite</string>
+
     <!-- SettingsActivity -->
     <string name="title_activity_settings">Settings</string>
 

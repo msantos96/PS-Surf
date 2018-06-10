@@ -11,6 +11,7 @@ import com.android.volley.Response
 import com.android.volley.Response.*
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import io.surf.wm.iwannasurfapp.fragment.FavoriteFragment
 import io.surf.wm.iwannasurfapp.fragment.SearchFragment
 import io.surf.wm.iwannasurfapp.model.Dtos
 import io.surf.wm.iwannasurfapp.model.Settings
@@ -38,6 +39,7 @@ class IWSApplication : Application() {
     val frags: Map<Int, Fragment> by lazy {
         mapOf(
                 R.id.navigation_search to SearchFragment()
+                , R.id.navigation_favorite to FavoriteFragment()
         )
     }
 }

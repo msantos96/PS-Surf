@@ -23,7 +23,7 @@
         app:srcCompat="@android:drawable/ic_menu_search" />
 
     <ListView
-        android:id="@+id/spot_list"
+        android:id="@+id/spots_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -46,8 +46,8 @@
         android:layout_marginTop="8dp"
         android:spinnerMode="dialog"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/spot_list"
-        app:layout_constraintEnd_toEndOf="@+id/spot_list"
+        app:layout_constraintBottom_toBottomOf="@+id/spots_list"
+        app:layout_constraintEnd_toEndOf="@+id/spots_list"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spot_list" />
+        app:layout_constraintTop_toTopOf="@+id/spots_list" />
 </android.support.constraint.ConstraintLayout>
