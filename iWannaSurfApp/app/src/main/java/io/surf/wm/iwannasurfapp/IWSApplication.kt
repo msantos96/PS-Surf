@@ -39,7 +39,7 @@ class IWSApplication : Application() {
     val frags: Map<Int, Fragment> by lazy {
         mapOf(
                 R.id.navigation_search to SearchFragment()
-                , R.id.navigation_favorite to FavoriteFragment()
+                //, R.id.navigation_favorite to FavoriteFragment()
         )
     }
 }

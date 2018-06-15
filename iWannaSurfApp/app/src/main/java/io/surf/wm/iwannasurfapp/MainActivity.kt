@@ -9,6 +9,7 @@ import android.support.design.widget.BottomNavigationView.OnNavigationItemSelect
 import android.location.LocationManager
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.location.Location
 import android.net.Uri
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.ActivityCompat
@@ -28,8 +29,6 @@ import android.widget.AdapterView.OnItemClickListener
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.android.volley.toolbox.StringRequest
-import io.surf.wm.iwannasurfapp.fragment.FavoriteFragment
-import java.util.concurrent.CompletableFuture
 
 class MainActivity : AppCompatActivity() {
 
@@ -73,7 +72,10 @@ class MainActivity : AppCompatActivity() {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 findViewById<ProgressBar>(R.id.prog_bar).visibility = ProgressBar.VISIBLE
                 findViewById<FloatingActionButton>(R.id.spot_search).isEnabled = false
-                val location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+                var location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+
+                while (location == null)
+                    location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
 
                 appState.sharedPreference.edit()
                         .putString(EXTRA_LAT, location.latitude.toString())
@@ -81,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                         .apply()
 
                 appState.queue.add(
-                        OfflineStringRequest(Request.Method.GET, suggestUrl(location.latitude, location.longitude, appState.settings.distance.get()),
+                        StringRequest(Request.Method.GET, suggestUrl(location.latitude, location.longitude, appState.settings.distance.get()),
                                 Response.Listener { response ->
                                     appState.spots = Gson().fromJson(response, Array<Dtos.Spot>::class.java).sortedWith(appState.settings.sortCriteria.get())
                                     val adapter = findViewById<ListView>(R.id.spots_list).adapter as SpotArrayAdapter
@@ -111,7 +113,7 @@ class MainActivity : AppCompatActivity() {
                             .putExtra(EXTRA_LON, appState.sharedPreference.getString(EXTRA_LON, "").toDouble()))
         }
 
-        val favoriteFragment: FavoriteFragment = appState.frags[R.id.navigation_favorite] as FavoriteFragment
+        /*val favoriteFragment: FavoriteFragment = appState.frags[R.id.navigation_favorite] as FavoriteFragment
 
         favoriteFragment.itemClickCb = searchFragment.itemClickCb
 
@@ -127,6 +129,7 @@ class MainActivity : AppCompatActivity() {
                                 //if(error == notFound) remove id from shared preferences.
                             }))
         }
+        */
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

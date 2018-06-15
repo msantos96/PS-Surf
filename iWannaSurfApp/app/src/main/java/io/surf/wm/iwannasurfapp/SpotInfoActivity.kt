@@ -24,9 +24,9 @@ class SpotInfoActivity : AppCompatActivity() {
 
         title = spot.dbSpot.identification.name
 
-        findViewById<ConstraintLayout>(R.id.navTo).setOnClickListener({
+        findViewById<ConstraintLayout>(R.id.navTo).setOnClickListener {
             goToMaps(sLat, sLon, spot.dbSpot.additionalInfo.realLat, spot.dbSpot.additionalInfo.realLon)
-        })
+        }
 
         (findViewById<TextView>(R.id.name)).text = spot.dbSpot.identification.name
         (findViewById<TextView>(R.id.distance)).text = spot.dbSpot.identification.distance.format(2)

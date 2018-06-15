@@ -6,9 +6,10 @@
         android:icon="@drawable/ic_search_blue_24dp"
         android:title="@string/title_search" />
 
+    <!--
     <item
         android:id="@+id/navigation_favorite"
         android:icon="@drawable/ic_favorite_border_blue_24dp"
         android:title="@string/title_favorite" />
-
+    -->
 </menu>
