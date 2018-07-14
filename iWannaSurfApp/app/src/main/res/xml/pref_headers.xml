@@ -3,17 +3,17 @@
     <!-- These settings headers are only used on tablets. -->
 
     <header
-        android:fragment="io.surf.wm.iwannasurfapp.SettingsActivity$GeneralPreferenceFragment"
+        android:fragment="io.surf.wm.iwannasurfapp.activities.SettingsActivity$GeneralPreferenceFragment"
         android:icon="@drawable/ic_edit_black_24dp"
         android:title="@string/pref_header_general" />
 
     <header
-        android:fragment="io.surf.wm.iwannasurfapp.SettingsActivity$PermissionsPreferenceFragment"
+        android:fragment="io.surf.wm.iwannasurfapp.activities.SettingsActivity$PermissionsPreferenceFragment"
         android:icon="@drawable/ic_perm_data_setting_black_24dp"
         android:title="@string/pref_header_permissions" />
 
     <header
-        android:fragment="io.surf.wm.iwannasurfapp.SettingsActivity$MemoryPreferenceFragment"
+        android:fragment="io.surf.wm.iwannasurfapp.activities.SettingsActivity$MemoryPreferenceFragment"
         android:icon="@drawable/ic_data_usage_black_24dp"
         android:title="@string/pref_header_memory" />
 

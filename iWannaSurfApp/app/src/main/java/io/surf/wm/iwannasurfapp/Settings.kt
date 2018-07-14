@@ -1,4 +1,4 @@
-package io.surf.wm.iwannasurfapp.model
+package io.surf.wm.iwannasurfapp
 
 import android.icu.util.Calendar
 import android.icu.util.ULocale

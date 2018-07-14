@@ -1,15 +1,16 @@
 <resources>
+    <string name="testing">Testing</string>
+
     <!-- MainActivity -->
     <string name="app_name">iWannaSurf</string>
-    <string name="temperature">Temperature</string>
-    <string name="height">Height</string>
-    <string name="period">Period</string>
 
     <!-- Search Fragment -->
     <string name="title_search">Search</string>
 
     <!-- Favorite Fragment -->
     <string name="title_favorite">Favorite</string>
+    <string name="remove_favorite">Remove Favorite</string>
+    <string name="add_favorite">Add Favorite</string>
 
     <!-- SettingsActivity -->
     <string name="title_activity_settings">Settings</string>
@@ -50,4 +51,23 @@
 
     <!-- SettingsActivity -->
     <string name="open_maps">Open in maps</string>
+
+    <!-- SpotActivity -->
+    <string name="feedback">Feedback</string>
+
+    <string name="swell">Swell</string>
+    <string name="height">Height</string>
+    <string name="period">Period</string>
+
+    <string name="wind">Wind</string>
+    <string name="speed">Speed</string>
+
+    <string name="direction">Direction</string>
+    <string name="stars">Stars</string>
+    <string name="navigate">Navigate</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="feedback_start_location">You need to start sharing your location.</string>
+    <string name="feedback_distance">You need to be closer to the spot.</string>
+    <string name="feedback_dialog">Spot feedback.</string>
+
 </resources>

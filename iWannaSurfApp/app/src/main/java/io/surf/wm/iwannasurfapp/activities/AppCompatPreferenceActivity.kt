@@ -1,4 +1,4 @@
-package io.surf.wm.iwannasurfapp
+package io.surf.wm.iwannasurfapp.activities
 
 import android.content.res.Configuration
 import android.os.Bundle

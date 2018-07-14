@@ -1,11 +1,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <EditTextPreference
-        android:editable="false"
-        android:shouldDisableView="false"
+    <Preference
         android:persistent="false"
-        android:capitalize="words"
         android:key="share_location"
+        android:capitalize="words"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
         android:title="@string/pref_title_share_location" />
 
 </PreferenceScreen>
