@@ -71,11 +71,10 @@ class SpotInfoActivity : AppCompatActivity(), OnMapReadyCallback {
                         appState.queue.add(
                                 JsonObjectRequest(Request.Method.POST, MainActivity.sendFeedback(), Notification(spot.dbSpot._id, input.text.toString()).toJsonObj(),
                                         Response.Listener { _ ->
-                                            Toast.makeText(applicationContext, "Done", Toast.LENGTH_LONG).show()
+                                            Toast.makeText(applicationContext, applicationContext.getString(R.string.done), Toast.LENGTH_LONG).show()
                                         },
                                         Response.ErrorListener { _ ->
-                                            //TODO: error
-                                            Toast.makeText(applicationContext, "Error", Toast.LENGTH_LONG).show()
+                                            Toast.makeText(applicationContext, applicationContext.getString(R.string.error), Toast.LENGTH_LONG).show()
                                         }))
                         builder.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
                     }

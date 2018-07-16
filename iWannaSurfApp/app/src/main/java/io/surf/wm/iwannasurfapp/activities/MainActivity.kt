@@ -12,8 +12,6 @@ import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.FragmentTransaction
 import android.support.v4.content.ContextCompat
-import com.android.volley.Request
-import com.android.volley.Response
 import com.google.gson.Gson
 import io.surf.wm.iwannasurfapp.fragments.SearchFragment
 import io.surf.wm.iwannasurfapp.model.Dtos.*
@@ -22,6 +20,7 @@ import android.view.MenuItem
 import android.view.View.OnClickListener
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.Toast
+import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
 import io.surf.wm.iwannasurfapp.IWSApplication
 import io.surf.wm.iwannasurfapp.R
@@ -83,15 +82,13 @@ class MainActivity : AppCompatActivity() {
                                     searchFragment.buttonIsEnabled(true)
                                 },
                                 Response.ErrorListener { e ->
-                                    //TODO: @string
-                                    Toast.makeText(this, "Something Went Wrong!", Toast.LENGTH_LONG).show()
+                                    Toast.makeText(this, applicationContext.getString(R.string.error), Toast.LENGTH_LONG).show()
                                     searchFragment.progressIsVisible(false)
                                     searchFragment.buttonIsEnabled(true)
                                 }))
             } else {
                 if(!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION)) {
-                    //TODO: @string
-                    Toast.makeText(this, "You Need To Start Sharing Your Location!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, applicationContext.getText(R.string.start_sharing), Toast.LENGTH_LONG).show()
                 }
                 ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION)
             }
@@ -114,9 +111,25 @@ class MainActivity : AppCompatActivity() {
                             Response.Listener { response ->
                                 favoriteFragment.futureSpots[id]!!.complete(Gson().fromJson(response, Spot::class.java))
                             },
-                            Response.ErrorListener { _ ->
-                                //TODO: error
-                                //if(error == notFound) remove id from shared preferences.
+                            Response.ErrorListener { e ->
+                                when (e) {
+                                    is TimeoutError -> Toast.makeText(applicationContext, applicationContext.getString(R.string.timeout), Toast.LENGTH_LONG).show()
+                                    is NoConnectionError -> Toast.makeText(applicationContext, applicationContext.getString(R.string.connection), Toast.LENGTH_LONG).show()
+                                    else -> {
+                                        val favsId: MutableSet<String> = appState.sharedPreference.getStringSet(IWSApplication.FAVS_PREF, mutableSetOf())
+                                        favsId.remove(id)
+
+                                        appState.sharedPreference
+                                                .edit()
+                                                .remove(IWSApplication.FAVS_PREF)
+                                                .apply()
+
+                                        appState.sharedPreference
+                                                .edit()
+                                                .putStringSet(IWSApplication.FAVS_PREF, favsId)
+                                                .apply()
+                                    }
+                                }
                             }))
         }
     }

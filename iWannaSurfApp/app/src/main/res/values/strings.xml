@@ -4,6 +4,12 @@
     <!-- MainActivity -->
     <string name="app_name">iWannaSurf</string>
 
+    <string name="error">Something Went Wrong Try Again Later XD.</string>
+    <string name="done">Done.</string>
+    <string name="start_sharing">You Need To Start Sharing Your Location.</string>
+    <string name="connection">Check Your Connection.</string>
+    <string name="timeout">Request Timeout.</string>
+
     <!-- Search Fragment -->
     <string name="title_search">Search</string>
 
