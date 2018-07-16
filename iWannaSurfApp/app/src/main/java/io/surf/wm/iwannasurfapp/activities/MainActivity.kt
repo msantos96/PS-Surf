@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         private const val HOST = "https://iwanna-surf.herokuapp.com"
         //private const val LOCALHOST = "http://10.0.2.2:3000"
         private const val SUGGEST = "/api/spots/suggest?lat=%f&lon=%f&range=%f"
-        private const val GET_BY_ID = "/api/spots/get/full?id=%s"
-        private const val SEND_FEEDBACK = "/api/notification/feedback"
+        private const val GET_BY_ID = "/api/spot/%s/full"
+        private const val SEND_FEEDBACK = "/api/feedback"
 
         fun suggestUrl(lat: Double, lon: Double, rad: Float) : String = String.format(String.format("%s%s", HOST, SUGGEST), lat, lon, rad).replace(',', '.')
         fun getByIdUrl(id: String) : String = String.format(String.format("%s%s", HOST, GET_BY_ID), id).replace(',', '.')
